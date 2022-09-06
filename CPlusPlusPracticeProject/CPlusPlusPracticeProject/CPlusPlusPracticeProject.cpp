@@ -4,6 +4,12 @@
 #include <iostream>
 #include <string>
 
+void BasicFunction() {
+    std::cout << "Basic Function ran! \n";
+}
+
+
+
 int main()
 {
     /*
@@ -110,27 +116,161 @@ int main()
     std::getline(std::cin, lineOfText);
     std::cout << "You typed " << lineOfText << "!\n";
 
+    */
+    
+        
+BasicFunction();
 
-    //SELECTION
-    bool decision = true;
+    /*
+        //SELECTION
+        bool boolCheck = true;
+        int decision = 5;
 
-    if (decision == true)
+        if (decision == 0)
+        {
+            std::cout << "Decision was 0! \n";
+        }
+        else if (decision == 1 && boolCheck == false)
+        {
+            std::cout << "Decision was 1!\n";
+        }
+        else if (decision == 2)
+        {
+            std::cout << "Decision was 2!\n";
+        }
+        else
+        {
+            std::cout << "Decision was not 0 or 1 or 2!\n";
+        }
+
+        int errorCode = 2;
+
+        switch (errorCode)
+        {
+        case 0:
+        {
+            std::cout << "Error was 0! \n";
+           break;
+        }
+        case 1:
+        {
+            std::cout << "Error was 1! \n";
+            break;
+        }
+        case 2:
+        {
+            std::cout << "Error was 2 ! \n";
+            break;
+        }
+        default:
+        {
+            std::cout << "Error was unrecognized! \n";
+            break;
+        }
+
+
+        //Which Way? :Asks the user which direction they wish to go out of 4 options, numbering
+        //Each option 1-4. Describe a scene unique to options they chose.
+
+        //Prints the users choice of location and asks for an input
+        std::cout << "Please choose one of the following directions: " << std::endl
+            << "1 . North" << std::endl << "2.East" << std::endl << "3.South" << std::endl << "4.West" << std::endl;
+        int choice = 0;
+        std::cin >> choice;
+
+
+        //Prints one of the following statements depending on the users choice
+        switch (choice)
+        {
+        case 1:
+        {
+            std::cout << "You chose North, Its raining and the locals are miserable! \n";
+            break;
+        }
+        case 2:
+        {
+            std::cout << "You chose East, You found yourself in the middle of a desert with no water......is that an island in the distance? \n";
+            break;
+        }
+        case 3:
+        {
+            std::cout << "You chose South \n";
+            break;
+        }
+        case 4:
+        {
+            std::cout << "You chose West \n";
+            break;
+        }
+        default:
+        {
+            std::cout << "You chose an invalid direction!! What a silly bugger! \n";
+            break;
+        }
+
+
+
+        //Iteration
+
+        //While loops are the same in C++ and C#
+        bool whileB = true;
+        //To enter this loop, this condition must be true
+        while (whileB == true)
+        {
+            //Do the body of the loop
+            whileB = false;
+            //At the end we check the condition, if it is still true, we loop again
+        }
+
+        int doI = 3;
+
+         do
+         {
+             ++doI;
+             std::cout << "Do while ran " << doI << " times! \n";
+
+         } while (doI < 2);
+
+
+         int outerI = 0;
+         for (int i = 0; i < 5; ++i)
+         {
+             //Do the body of the loop
+             std::cout << "For loop ran " << i << " times! \n";
+         }
+         
+
+    //Example Program - Goooooooogle - Store a variable for the number of pages of search results. Create a string 
+    //of the word "google", but where there a number of o equal to the number of page results. Print the resulting string
+    
+    int searchResults = 5;
+    std::string google = "G";
+    for (int i = 0; i < searchResults; ++i)
     {
-        std::cout << "Decision was True! \n";
-    }
-    else
-    {
-        std::cout << "Decision was False!\n";
-    }
+        google += "o";
+    }   
+    
+    google += "gle";
 
-    //Advanced if statement: Ternary
-    //Written in line with other code such as assignment statements
-    //It returns in one of two values based on the condition
-    int ternResult = decision ? 1 : 2;
+    std::cout << google << std::endl;
 
     */
 
 
+
+
+
+}
+
+
+    //Advanced if statement: Ternary
+    //Written in line with other code such as assignment statements
+    //It returns in one of two values based on the condition
+    //int ternResult = decision ? 1 : 2;
+
+    
+
+    /*
      //Practice C++ HomeWork Problems
 
     //1. Variables - Rectangle Info - Find the perimeter and area of a rectangle, given the length and width.
@@ -268,7 +408,7 @@ int main()
     
 
 
-/*
+
     //7. Iteration - Bottles of Beer on the Wall - Read an input for a number of bottles of beer to have on the wall.
     //Ask the user if they would like to drink a bottle. If they do, print the corresponding lyrics to “99 bottles of beer on the wall”, 
     //but with the input number of beers on the wall, which is then decreased by 1. Repeat until they stop drinking or run out of beer.
@@ -308,10 +448,11 @@ int main()
             }
             drink = false;
         }
-        */
+        
 
     
 }
+*/
 
 
 
