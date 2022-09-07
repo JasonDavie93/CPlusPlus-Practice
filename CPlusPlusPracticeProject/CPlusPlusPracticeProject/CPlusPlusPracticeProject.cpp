@@ -9,10 +9,26 @@ void BasicFunction() {
 }
 
 
+//There exists a function called EarlyDeclare
+//This is called a Forward Declaration
+void EarlyDeclare();
+
+void ParameterFunc(int paramInt)
+{
+    ++paramInt;
+    std::cout << "ParameterFunc ran - paramInt = " << paramInt <<  "\n";
+}
+
+
+int ReturnFunc()
+{
+    return 42;
+}
+
 
 int main()
-{
-    /*
+{/*
+    
     //Examples of different variable types
     int testInt = 100;
     unsigned testUnsigned = 100u;
@@ -116,12 +132,12 @@ int main()
     std::getline(std::cin, lineOfText);
     std::cout << "You typed " << lineOfText << "!\n";
 
-    */
+    
     
         
-BasicFunction();
+    BasicFunction();
 
-    /*
+    
         //SELECTION
         bool boolCheck = true;
         int decision = 5;
@@ -256,12 +272,36 @@ BasicFunction();
 
     */
 
+/*
+    EarlyDeclare();
+
+    int testInt = 4;
+    //Like saying paramInt = 4
+    ParameterFunc(testInt);
+    std::cout << "testInt = " << testInt << "!\n";
+    
+    int returnValue = ReturnFunc();
+    std::cout << "returnValue = " << returnValue << "!\n";*/
 
 
+
+    //Static Array
+    int intArray[] = { 0, 1, 2 };
+    const int intArraySize = 3;
+    int intArrayB[intArraySize];
 
 
 }
 
+
+
+
+//Implementation for EarlyDeclare that was declared at the top
+//Name must match exactly
+void EarlyDeclare()
+{
+    std::cout << "Early Declare function ran! \n";
+}
 
     //Advanced if statement: Ternary
     //Written in line with other code such as assignment statements
