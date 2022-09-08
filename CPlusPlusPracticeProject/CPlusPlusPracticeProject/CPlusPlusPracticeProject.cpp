@@ -3,32 +3,73 @@
 
 #include <iostream>
 #include <string>
+#include <time.h>
 
-void BasicFunction() {
+
+/*void BasicFunction() {
     std::cout << "Basic Function ran! \n";
+}*/
+
+void RandomNumber()
+{
+    //Gets the current time and sets the random seed
+    srand(time(NULL));
+    //Min and max scores possible
+    int minScore = 0;
+    int maxScore = 100;
+    //For loop to generate 5 random numbers
+    for (int i = 1; i < 6; ++i)
+    {
+        //Calculates a range between two numbers
+        int range = maxScore - minScore;
+        int randomRange = minScore + std::rand() % range;
+        //Prints random numbers
+        std::cout << "Player " << i  << ": " << randomRange << "\n";
+    }
+    
 }
-
-
 //There exists a function called EarlyDeclare
 //This is called a Forward Declaration
-void EarlyDeclare();
+//void EarlyDeclare();
 
-void ParameterFunc(int paramInt)
+/*void ParameterFunc(int paramInt)
 {
     ++paramInt;
     std::cout << "ParameterFunc ran - paramInt = " << paramInt <<  "\n";
-}
+}*/
 
 
-int ReturnFunc()
+/*int ReturnFunc()
 {
     return 42;
-}
+}*/
 
+/*
+//Function for accepting parameters and calculates the area of a rectangle
+void CalculateRectangle()
+{
+
+    int lengthRec;
+    int widthRec;
+    
+    std::cout << "Please enter a Length: (cm) \n";
+    std::cin >> lengthRec;
+    std::cout << "Please enter a Width: (cm) \n";
+    std::cin >> widthRec;
+    int areaRec = (lengthRec * widthRec);
+    std::cout << "Length = " << lengthRec << "cm\n"
+        << "Width = " << widthRec << "cm\n"
+        << "Area = " << areaRec << "cm^2\n";
+}
+*/
 
 int main()
-{/*
-    
+{
+    //Calls RandomNumber() Function
+    RandomNumber();
+    /*
+    CalculateRectangle();
+
     //Examples of different variable types
     int testInt = 100;
     unsigned testUnsigned = 100u;
@@ -284,24 +325,24 @@ int main()
     std::cout << "returnValue = " << returnValue << "!\n";*/
 
 
-
+/*
     //Static Array
     int intArray[] = { 0, 1, 2 };
     const int intArraySize = 3;
     int intArrayB[intArraySize];
 
 
-}
+}*/
 
 
 
 
 //Implementation for EarlyDeclare that was declared at the top
 //Name must match exactly
-void EarlyDeclare()
+/*void EarlyDeclare()
 {
     std::cout << "Early Declare function ran! \n";
-}
+}*/
 
     //Advanced if statement: Ternary
     //Written in line with other code such as assignment statements
@@ -425,7 +466,12 @@ void EarlyDeclare()
     //Outputs the users dob e.g 5/March/1993!
     std::cout << "Your dob is:  " << day << "/" << month <<"/" << year << "!\n";
 
+    */
 
+    //C++ Practice Questions week 2
+    
+    
+    /*
     //6. Selection - Swear Bleeper - Store a "bad" word (it could be anything) in a string variable.
     //Ask the player to enter a single word. Compare if the word they entered is the same as the bad word,
     //and if it is, print out the word "BLEEP". If it is NOT the same, print out the word the player entered.
@@ -488,11 +534,44 @@ void EarlyDeclare()
             }
             drink = false;
         }
+        */
+
+        //8. Functions: Rectangle Area - Mark II. Write a function to calculate the area of a rectangle, based on parameters passed in for width and height. 
+        //It should return the value back to the calling code. Call this function in main, and print the result.
+
+        //******* ABOVE IN CODE *******
+
+       
+        //9. Randomisation: Random Score. Write a function to create a random score for a fake player. The function should accept a 
+        //minimum and maximum score, and return the resulting random score. The calling code should then call this function five times, 
+        //printing the result each time. Every time this program is run, these scores should be different.
+
+
+        //******** ABOVE IN CODE *******
         
 
+
+
+        //10. Vectors: Who’s In Your Party. Write a program to read in the names for a player’s adventuring party, which can have any number of 
+        //party members. Each party member’s name should be stored separately in an array or vector. 
+        //Print them out when the player is done entering the names.
+   
+std::string firstNameParty;
+std::string secondNameParty;
+
+std::string partyList[5];
+for (int i = 0; i < 5; ++i)
+{
+    
+    //Prints random numbers
+    std::cout << "Please Enter Party Members first name: \n";
+    std::cin >> firstNameParty;
+    std::cout << "Please Enter Party Members second name: \n";
+    std::cin >> secondNameParty;
+}
     
 }
-*/
+
 
 
 
